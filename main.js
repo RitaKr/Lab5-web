@@ -216,7 +216,6 @@ function indexOfPizza(pizza) {
 
     bucket.forEach((bucketPizza, i) => {
         if (bucketPizza.title == pizza.title && bucketPizza.size.name == pizza.size.name) {
-            console.log("contains")
             includes = i;
         }
     });
@@ -427,8 +426,7 @@ function stringifyOrder(){
 window.onload = () => {
 
     fetchPizzaList(data => {
-        // Отримані дані доступні у змінній `data`
-        console.log(data);
+        //console.log(data);
         allPizzas = data;
         filteredPizzas = allPizzas;
         handleFilters();
