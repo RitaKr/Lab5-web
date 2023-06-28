@@ -25,24 +25,28 @@
                     </div>
 
                     <button class="orange-btn quit-btn">Вийти</button>
+                    <button class="orange-btn open-bucket-btn" id="openBucketBtn">
+                        <img src="assets/images/shopping-basket.png" alt="Замовлення">
+                    </button>
                 </section>
                 <hr />
                 <section>
                     <p>
                         Піца
                     </p>
+                    
                     <button class="orange-btn quit-btn">Вийти</button>
                 </section>
 
             </div>
         </header>
         <section class="main">
-            <h1>Усі піци <span class="quantity" id="allPizzasAmount"></span></h1>
+            <h1><span id="title">Усі піци </span><span class="quantity" id="allPizzasAmount"></span></h1>
             <nav>
                 <ul>
                     <li id="all" class="selected">Усі</li>
                     <li id="meat">М'ясні</li>
-                    <li id="with-pineaples">З ананасами</li>
+                    <li id="with-pineapples">З ананасами</li>
                     <li id="with-mushrooms">З грибами</li>
                     <li id="with-seaproducts">З морепродуктами</li>
                     <li id="vega">Вега</li>
@@ -57,7 +61,7 @@
             <p>Доставка піци не здійснюється</p>
         </footer>
     </main>
-    <aside>
+    <aside id="bucketAside">
         <header>
             <h2>Замовлення<span class="quantity" id="bucketSize"></span></h2>
             <button class="reset-btn" id="clearBucket">Очистити замовлення</button>

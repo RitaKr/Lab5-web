@@ -6,7 +6,7 @@
     --orange2: rgb(222, 114, 42);
     --orange-btn-bg: linear-gradient(to top,rgb(215, 145, 42) ,rgb(249, 162, 56) 90%, rgb(234, 188, 111) 96%);
     --menu-bg: #000000cc;
-    --main-bg: #fffff6;
+    --main-bg: #fcfcf1;
     --aside-bg: rgb(240, 240, 240);
     --half-white: #ffffff90;
     --dark-gray: #333333;
@@ -351,12 +351,14 @@ aside header h2 {
     color: var(--orange1);
     font-weight: 500;
     margin: 0;
+
 }
 .bucket-item section {
     display: flex;
     align-items: center;
     width: 80%;
 }
+
 .bucket-item .size-section {
     margin: 10px 0;
 }
@@ -472,6 +474,9 @@ aside footer .orange-btn {
 .logo.badge p.percent {
     margin: 10px 0;
 }
+.open-bucket-btn {
+    display: none;
+}
 @media screen and (max-width: 1230px){
     section.main {
         width: calc(100% - 50px);
@@ -543,27 +548,29 @@ aside footer .orange-btn {
     .pizza figcaption .size-selection > section.small-pizza {
         margin-bottom: 10px;
     }
+    .upper-section span.tel {
+        font-size: 1.0rem;
+    }
     
     
 }
-@media screen and (max-width: 550px){
-    
-    body {
-        flex-direction: column;
-    }
-    main {
-        width: 100%;
-    }
-    .working-hours {
+@media screen and (max-width: 530px){
+    .open-bucket-btn {
         display: inline-block;
     }
+    :root {
+        --aside-width: 270px;
+        --main-width: 100%;
+    }
+    
+
     aside {
-        position: relative;
-        width: 100%;
+       z-index: 1000;
+       height: 100vh;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
     }
-    aside footer {
-        position: relative
-    }
+    
     .pizza {
         max-width: max-content;
     }
@@ -585,11 +592,7 @@ aside footer .orange-btn {
         background-position: 120% center;
     }
 }
-@media screen and (max-width: 470px){
-    .working-hours {
-        display: none;
-    }
-}
+
 @media screen and (max-width: 350px){
     .pizza figcaption .size-selection {
         flex-direction: column;
@@ -610,11 +613,22 @@ aside footer .orange-btn {
     }
 }
 @media screen and (max-width: 300px){
-    
-    main, aside {
+    body {
+        flex-direction: column;
+    }
+    body > main {
         min-width: 270px;
     }
-    
+    aside {
+        position: relative;
+        min-width:100%;
+        transform: translateX(0);
+
+    }
+
+    .open-bucket-btn {
+        display: none;
+    }
     .upper-section span.tel {
         font-size: 0.9rem;
     }
