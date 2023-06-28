@@ -70,6 +70,27 @@
         }
     },
     {
+        "id": 10,
+        "icon": "assets/images/pizza_10.png",
+        "title": "Пепероні",
+        "type": "М’ясна піца",
+        "content": {
+            "meat": ["салямі"],
+            "cheese": ["сир моцарелла"],
+            "additional": ["соус томатний"]
+        },
+        "small_size": {
+            "weight": 450,
+            "size": 30,
+            "price": 125
+        },
+        "big_size": {
+            "weight": 790,
+            "size": 40,
+            "price": 180
+        }
+    },
+    {
         "id": 4,
         "icon": "assets/images/pizza_5.png",
         "title": "Сициліано",

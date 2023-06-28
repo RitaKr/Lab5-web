@@ -388,36 +388,26 @@ function hideAsideWithClick() {
 	});
 }
 function hideAsideWithSwipe() {
-	// Variables to store swipe start and end coordinates
 	let startX = 0;
 	let endX = 0;
 
-	// Minimum swipe distance threshold
 	const minSwipeDistance = 30;
 
-	// Element to attach the swipe event listener
-
 	const aside = document.getElementById("bucketAside");
-	// Add touchstart event listener
+
 
 	aside.addEventListener("touchstart", function (event) {
 		console.log(event)
 		startX = event.touches[0].clientX;
 	
 	});
-	// Add touchend event listener
+	
 	aside.addEventListener("touchend", function (event) {
 		console.log(event)
 		if (window.innerWidth <= 530 && window.innerWidth > 300) {
 			endX = event.changedTouches[0].clientX;
-	
-
-			// Calculate the distance in both X and Y axes
 			const deltaX = endX - startX;
-			
-
-			// Check if the distance is greater than the threshold
-
+	
 			if (deltaX > minSwipeDistance) {
 					// Right swipe
 					console.log("Swiped right");
@@ -455,6 +445,7 @@ window.onload = () => {
 		fetchFromLocalStorage();
 		console.log(allPizzas);
 		renderHTML();
+		applyFilter("all");
 
 		window.addEventListener("resize", () => {
 			resizeBucketItemsBackground();
